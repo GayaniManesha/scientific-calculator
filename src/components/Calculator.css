@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
-  background: linear-gradient(135deg, #d9a7c7, #fffcdc, #a1c4fd); /* lavender to blush */
+  background: linear-gradient(135deg, #d9a7c7, #fcd3de, #a3cef1); /* pastel purple-pink-blue */
   background-size: 300% 300%;
   animation: gradientShift 12s ease infinite;
   display: flex;
@@ -23,14 +23,14 @@ body {
   width: 400px;
   border-radius: 25px;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.9); /* Light glass */
-  box-shadow: 0 20px 50px rgba(99, 76, 129, 0.4); /* subtle violet glow */
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 20px 50px rgba(99, 76, 129, 0.4);
   backdrop-filter: blur(25px);
   transition: all 0.4s ease;
 }
 
 .calculator-container.dark {
-  background: rgba(30, 25, 50, 0.95); /* deep violet glass */
+  background: rgba(40, 30, 60, 0.95); /* deep violet */
   color: #f5f5f5;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(20px);
@@ -56,7 +56,7 @@ body {
 }
 
 .calculator-container.dark .calculator-header h1 {
-  color: #e0d9f5; /* light lavender in dark mode */
+  color: #e0d9f5; /* light lavender */
 }
 
 .mode-toggle {
@@ -64,7 +64,7 @@ body {
   border: none;
   font-size: 1.6rem;
   cursor: pointer;
-  color: #8e44ad; /* purple sun/moon */
+  color: #8e44ad; /* purple icon */
   transition: transform 0.3s ease;
 }
 
@@ -73,39 +73,48 @@ body {
 }
 
 .calculator-container.dark .mode-toggle {
-  color: #f1c40f; /* gold moon icon in dark mode */
+  color: #f1c40f; /* gold icon in dark mode */
 }
 
 /* === Display === */
 .calculator-display {
-  background: rgba(255, 255, 255, 0.65);
-  backdrop-filter: blur(15px);
-  padding: 20px;
+  background: linear-gradient(145deg, #f8f9fa, #e2e6ea);
+  backdrop-filter: blur(20px);
+  padding: 25px;
   text-align: right;
   font-size: 1.4rem;
   border-radius: 20px;
   margin: 15px;
-  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.15),
+              0 0 18px rgba(108, 92, 231, 0.4);
+  color: #2c3e50;
 }
 
 .calculator-container.dark .calculator-display {
-  background: rgba(50, 45, 75, 0.85);
+  background: linear-gradient(145deg, #5e5b8c, #3c3b5c);
+  box-shadow: inset 0 4px 12px rgba(0, 0, 0, 0.3),
+              0 0 20px rgba(155, 89, 182, 0.7);
+  color: #ecf0f1;
 }
 
 .expression {
   font-size: 1rem;
-  opacity: 0.75;
-  color: #6c5ce7; /* deep lavender */
+  opacity: 0.85;
+  color: #636e72;
+}
+
+.calculator-container.dark .expression {
+  color: #dcdde1;
 }
 
 .result {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 700;
-  color: #00b894; /* emerald green for contrast */
+  color: #2d3436;
 }
 
 .calculator-container.dark .result {
-  color: #74b9ff; /* bright teal */
+  color: #ffffff;
 }
 
 /* === Buttons === */
@@ -125,23 +134,23 @@ button {
   font-weight: 600;
   color: #4a4a4a;
   cursor: pointer;
-  box-shadow: 5px 8px 15px rgba(108, 92, 231, 0.3); /* subtle purple glow */
+  box-shadow: 5px 8px 15px rgba(108, 92, 231, 0.3);
   transition: all 0.3s ease, transform 0.1s ease;
 }
 
 button:hover {
   background: linear-gradient(145deg, #ffffff, #dcdde1);
   transform: scale(1.1);
-  box-shadow: 0 4px 15px rgba(108, 92, 231, 0.5); /* more vibrant glow */
+  box-shadow: 0 4px 15px rgba(108, 92, 231, 0.5);
 }
 
 .calculator-container.dark button {
-  background: linear-gradient(145deg, #434358, #535c75);
+  background: linear-gradient(145deg, #58506d, #6b5d85);
   color: #ecf0f1;
 }
 
 .calculator-container.dark button:hover {
-  background: linear-gradient(145deg, #6c5ce7, #4834d4);
+  background: linear-gradient(145deg, #9b59b6, #8e44ad);
   color: #fff;
 }
 
@@ -157,8 +166,12 @@ button:hover {
   background: linear-gradient(145deg, #01b8b4, #019a91);
 }
 
+.calculator-container.dark .equals {
+  background: linear-gradient(145deg, #00cec9, #00b894);
+}
+
 .clear {
-  background: linear-gradient(145deg, #ff7675, #e84393); /* rose pink */
+  background: linear-gradient(145deg, #ff7675, #e84393);
   color: white;
   grid-column: span 2;
   box-shadow: 0 4px 15px rgba(232, 67, 147, 0.5);
@@ -168,8 +181,12 @@ button:hover {
   background: linear-gradient(145deg, #e84393, #d63031);
 }
 
+.calculator-container.dark .clear {
+  background: linear-gradient(145deg, #ff7675, #e84393);
+}
+
 .backspace {
-  background: linear-gradient(145deg, #74b9ff, #0984e3); /* sky blue */
+  background: linear-gradient(145deg, #74b9ff, #0984e3);
   color: white;
   grid-column: span 2;
   box-shadow: 0 4px 15px rgba(9, 132, 227, 0.5);
@@ -177,4 +194,8 @@ button:hover {
 
 .backspace:hover {
   background: linear-gradient(145deg, #0984e3, #0063b1);
+}
+
+.calculator-container.dark .backspace {
+  background: linear-gradient(145deg, #74b9ff, #0984e3);
 }
