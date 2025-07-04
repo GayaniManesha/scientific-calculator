@@ -25,24 +25,3 @@ Follow these simple steps to get SciCalc up and running on your machine:
 ```bash
 git clone https://github.com/GayaniManesha/sciCalc.git
 
-2.Navigate into the project directory
-
-```bash
-cd sciCalc
-
-```bash
-
-3.Install dependencies
-
-```bash
-npm install
-
-4.Start the development server
-
-```bash
-npm start
-
-5.Open your browser and visit
-
-```bash
-http://localhost:3000
