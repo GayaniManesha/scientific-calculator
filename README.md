@@ -25,7 +25,3 @@ Follow these simple steps to get SciCalc up and running on your machine:
 ```bash
 git clone https://github.com/GayaniManesha/sciCalc.git
 
-2️⃣ **Navigate to the Project Folder**
-
-```bash
-cd sciCalc
